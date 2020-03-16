@@ -1,7 +1,27 @@
 <div class="container-fluid animated fadeIn">
-    <div class="row">
+    <div class="row mt-5 ">
+
         <div class="col-12">
-            <h2>Consumo de servicio REST</h2>
+            <div class="text-center">
+                <h2>Consumo de servicio</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-4">
+        <div class="col mt-5" *ngFor="let inf of informacion" >
+
+            <div class="card" style="width: 18rem;" >
+                <img [src]=inf.flag class="card-img-top" [alt]=inf.name>
+                <div class="card-body">
+                  <h5 class="card-title">{{ inf.name }}</h5>
+                  <p class="card-text">Capital {{ inf.capital }} </p>
+                  <p class="card-text">Población {{ inf.population | number }} </p>
+                </div>
+            </div>
+
         </div>
     </div>
+
 </div>

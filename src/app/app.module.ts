@@ -7,6 +7,12 @@ import { MenuComponent } from './components/shared/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { EjemConsumoComponent } from './components/ejem-consumo/ejem-consumo.component';
 
+//Lo necesario
+import { ConsumoServiceService } from './services/consumo-service.service';
+
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +22,12 @@ import { EjemConsumoComponent } from './components/ejem-consumo/ejem-consumo.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ConsumoServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
