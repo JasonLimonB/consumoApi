@@ -17,8 +17,6 @@ export class EjemConsumoComponent implements OnInit {
     
     this._miServicio.getData().subscribe((data:any) => {
       this.informacion = data;
-      console.log(data);
-      
     });
     
   }

@@ -7,23 +7,29 @@ import { MenuComponent } from './components/shared/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { EjemConsumoComponent } from './components/ejem-consumo/ejem-consumo.component';
 
-//Lo necesario
+
 import { ConsumoServiceService } from './services/consumo-service.service';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HomeComponent,
-    EjemConsumoComponent
+    EjemConsumoComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     ConsumoServiceService
